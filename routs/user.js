@@ -21,7 +21,7 @@ user.post('/verify',(req,res)=>{
     console.log(req.body);
     if(req.body.username===username&&req.body.password===password){
         req.session.user=req.body.username;
-        res.redirect('home');
+        res.redirect('home')
     }
     else{
           req.session.passwordwrong=true  
